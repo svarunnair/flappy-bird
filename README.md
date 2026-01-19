@@ -1,29 +1,79 @@
-# Welcome to your Expo app 👋
+# Flappy Bird Game 🐦
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A complete Flappy Bird game built with React Native and Expo.
 
-## Get started
+## Features
 
-1. Install dependencies
+- ✅ Functional components with React hooks
+- ✅ Bird falls due to gravity
+- ✅ Tap screen to make bird jump
+- ✅ Moving pipes from right to left
+- ✅ Collision detection (bird vs pipes and ground)
+- ✅ Score increases when bird passes a pipe
+- ✅ Game over screen with restart button
+- ✅ Built with React Native Animated API and requestAnimationFrame
+- ✅ Clean, readable code with comments
+
+## How to Run
+
+### Prerequisites
+
+- Node.js installed (v18 or higher recommended)
+- npm or yarn package manager
+- Expo CLI (optional, but recommended)
+
+### Installation
+
+1. Navigate to the project directory:
+
+   ```bash
+   cd flappy-bird
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+### Running the Game
 
-   ```bash
-   npx expo start
-   ```
+Start the Expo development server:
 
-In the output, you'll find options to open the app in a
+```bash
+npm start
+# or
+npx expo start
+```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+You can then:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Press `i`** to open in iOS simulator (requires Xcode on Mac)
+- **Press `a`** to open in Android emulator (requires Android Studio)
+- **Press `w`** to open in web browser
+- **Scan QR code** with Expo Go app on your phone
+
+### Playing the Game
+
+1. **Start**: Tap anywhere on the screen to start the game
+2. **Jump**: Tap the screen to make the bird jump/flap
+3. **Objective**: Navigate through the pipes without colliding
+4. **Score**: Each pipe you pass increases your score
+5. **Game Over**: If you hit a pipe or the ground, the game ends
+6. **Restart**: Tap the "Restart" button to play again
+
+## Game File
+
+The main game logic is located in:
+- `app/(tabs)/index.tsx` - Complete Flappy Bird game implementation
+
+## Technical Details
+
+- **Game Loop**: Uses `requestAnimationFrame` for smooth 60fps animation
+- **Physics**: Custom gravity and velocity system
+- **Collision Detection**: Rectangle-based collision detection for bird vs pipes and ground
+- **Animation**: React Native `Animated` API for bird movement
+- **State Management**: React hooks (`useState`, `useRef`, `useEffect`)
 
 ## Get a fresh project
 
